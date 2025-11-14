@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Navbar() {
   return (
@@ -14,7 +15,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2 cursor-pointer">
+          <Link href="/" className="flex items-center gap-2 cursor-pointer">
             <img
               src="/logo.png"
               alt="Logo"
@@ -24,7 +25,7 @@ export function Navbar() {
             <span className="text-2xl font-bold text-foreground leading-none">
               EmojiHub
             </span>
-          </div>
+          </Link>
 
           <div>
             <Button
