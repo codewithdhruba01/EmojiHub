@@ -28,7 +28,7 @@ export function HeroSection({
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 bg-clip-text text-transparent leading-tight">
             Discover Perfect Emojis
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg font-mono sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Search through hundreds of emojis. Click to copy instantly. Express
             yourself with style.
           </p>
