@@ -38,37 +38,45 @@ export function HeroSection({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative max-w-2xl mx-auto"
+          className="relative max-w-2xl mx-auto z-40"
         >
           <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none z-20">
+              <Search className="h-5 w-5 text-amber-500" />
+            </div>
             <Input
               type="text"
               placeholder="Search emojis by name or tag..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="w-full pl-12 pr-4 py-6 text-lg rounded-2xl bg-card/50 backdrop-blur-sm border-2 focus:border-amber-500 transition-all duration-300"
+              className="w-full pl-12 pr-4 py-6 text-lg rounded-2xl bg-card/50 backdrop-blur-sm border-2 border-border focus:border-amber-500 transition-all duration-300 focus:shadow-lg focus:shadow-amber-500/20"
             />
           </div>
 
           {suggestions.length > 0 && searchQuery && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute top-full mt-2 w-full bg-card border rounded-xl shadow-xl z-50 overflow-hidden"
+              initial={{ opacity: 0, y: -10, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="absolute top-full mt-3 w-full bg-card/95 backdrop-blur-md border-2 border-amber-500/30 rounded-2xl shadow-2xl z-50 overflow-hidden"
             >
-              <div className="p-2 max-h-64 overflow-y-auto">
+              <div className="p-1 max-h-80 overflow-y-auto custom-scrollbar">
                 {suggestions.map((suggestion, index) => (
                   <motion.button
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
+                    transition={{ delay: index * 0.03 }}
+                    whileHover={{ scale: 1.02, x: 8 }}
+                    whileTap={{ scale: 0.98 }}
                     onClick={() => onSuggestionClick(suggestion)}
-                    className="w-full text-left px-4 py-2 hover:bg-accent rounded-lg transition-colors duration-200 text-sm"
+                    className="w-full text-left px-4 py-3 hover:bg-gradient-to-r hover:from-amber-500/20 hover:to-orange-500/20 rounded-xl transition-all duration-200 text-sm font-medium text-foreground/80 hover:text-foreground border-l-4 border-transparent hover:border-amber-500/50"
                   >
-                    {suggestion}
+                    <span className="inline-flex items-center gap-2">
+                      <span className="text-amber-500">✨</span>
+                      {suggestion}
+                    </span>
                   </motion.button>
                 ))}
               </div>
