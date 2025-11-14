@@ -127,7 +127,6 @@ export const emojiData: Emoji[] = [
   { emoji: '🤟', name: 'Love-You Gesture', category: 'Gestures', tags: ['love', 'rock'] },
   { emoji: '🤘', name: 'Sign of the Horns', category: 'Gestures', tags: ['rock', 'metal'] },
   { emoji: '🤙', name: 'Call Me Hand', category: 'Gestures', tags: ['call', 'phone', 'shaka'] },
-  { emoji: '��', name: 'Backhand Index Pointing Left', category: 'Gestures', tags: ['point', 'left'] },
   { emoji: '👉', name: 'Backhand Index Pointing Right', category: 'Gestures', tags: ['point', 'right'] },
   { emoji: '👆', name: 'Backhand Index Pointing Up', category: 'Gestures', tags: ['point', 'up'] },
   { emoji: '👇', name: 'Backhand Index Pointing Down', category: 'Gestures', tags: ['point', 'down'] },
