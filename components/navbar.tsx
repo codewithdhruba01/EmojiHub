@@ -44,7 +44,7 @@ export function Navbar() {
               size="sm"
               className="gap-2"
               onClick={() =>
-                window.open('https://github.com', '_blank', 'noopener,noreferrer')
+                window.open('https://github.com/codewithdhruba01/EmojiHub', '_blank', 'noopener,noreferrer')
               }
             >
               <Github className="h-4 w-4" />
