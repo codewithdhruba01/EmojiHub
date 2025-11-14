@@ -114,8 +114,12 @@ export default function Home() {
           {/* Left Side Logo + Text */}
           <div className="flex flex-col items-center md:items-start">
             <div className="flex items-center gap-2 mb-2">
-              <img src="/logo.png" alt="Logo" className="w-8 h-8" />
-              <h2 className="text-xl font-semibold text-foreground">
+              <img
+                src="/logo.png"
+                alt="Logo"
+                className="h-12 w-12 object-contain"
+              />
+              <h2 className="text-2xl font-bold font-sans text-foreground leading-none">
                 EmojiHub
               </h2>
             </div>
