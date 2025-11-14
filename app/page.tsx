@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Navbar } from '@/components/navbar';
-import { HeroSection } from '@/components/hero-section';
-import { EmojiGrid } from '@/components/emoji-grid';
-import { emojiData, categories } from '@/lib/emoji-data';
+import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { Navbar } from "@/components/navbar";
+import { HeroSection } from "@/components/hero-section";
+import { EmojiGrid } from "@/components/emoji-grid";
+import { emojiData, categories } from "@/lib/emoji-data";
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredEmojis = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -85,7 +85,7 @@ export default function Home() {
               </h2>
               <p className="text-muted-foreground">
                 Found {filteredEmojis.length} emoji
-                {filteredEmojis.length !== 1 ? 's' : ''}
+                {filteredEmojis.length !== 1 ? "s" : ""}
               </p>
             </div>
             <EmojiGrid emojis={filteredEmojis} />
@@ -109,23 +109,49 @@ export default function Home() {
         )}
       </main>
 
-      <footer className="border-t border-border py-8 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="text-center text-muted-foreground"
-          >
-            <p className="mb-2">
-              Made with{' '}
-              <span className="inline-block animate-pulse">❤️</span> using
-              Next.js & Framer Motion
+      <footer className="mt-20 border-t border-border py-12 bg-background/40 backdrop-blur">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          {/* Left Side Logo + Text */}
+          <div className="flex flex-col items-center md:items-start">
+            <div className="flex items-center gap-2 mb-2">
+              <img src="/logo.png" alt="Logo" className="w-8 h-8" />
+              <h2 className="text-xl font-semibold text-foreground">
+                EmojiHub
+              </h2>
+            </div>
+
+            <p className="text-muted-foreground text-sm">
+              © 2025 EmojiHub. All rights reserved.
             </p>
-            <p className="text-sm">
-              Click any emoji to copy it to your clipboard
-            </p>
-          </motion.div>
+          </div>
+
+          {/* Right Side Links */}
+          <div className="flex gap-8 text-sm">
+            <a
+              className="text-muted-foreground hover:text-foreground transition"
+              href="#"
+            >
+              Products
+            </a>
+            <a
+              className="text-muted-foreground hover:text-foreground transition"
+              href="#"
+            >
+              About
+            </a>
+            <a
+              className="text-muted-foreground hover:text-foreground transition"
+              href="#"
+            >
+              Support
+            </a>
+            <a
+              className="text-muted-foreground hover:text-foreground transition"
+              href="#"
+            >
+              Contact
+            </a>
+          </div>
         </div>
       </footer>
     </div>
