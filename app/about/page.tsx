@@ -243,7 +243,7 @@ export default function About() {
           <div className="flex gap-8 text-sm">
             <a
               className="text-muted-foreground hover:text-foreground transition"
-              href="#"
+              href="/"
             >
               Products
             </a>
@@ -255,13 +255,13 @@ export default function About() {
             </a>
             <a
               className="text-muted-foreground hover:text-foreground transition"
-              href="#"
+              href="/support"
             >
               Support
             </a>
             <a
               className="text-muted-foreground hover:text-foreground transition"
-              href="#"
+              href="/contact"
             >
               Contact
             </a>
