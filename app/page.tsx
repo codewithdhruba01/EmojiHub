@@ -139,7 +139,7 @@ export default function Home() {
             </a>
             <a
               className="text-muted-foreground hover:text-foreground transition"
-              href="#"
+              href="/about"
             >
               About
             </a>
