@@ -1,4 +1,6 @@
-# EmojiHub
+# EmojiHub😜
+
+![Banner](public/emojihub-cover.png)
 
 A beautiful, fully functional emoji search and copy application built with Next.js 13, Framer Motion, and modern web technologies.
 
